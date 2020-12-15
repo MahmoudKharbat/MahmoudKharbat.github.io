@@ -1,0 +1,181 @@
+body
+{
+    padding: 0px;
+    margin: 0px;
+    box-sizing: border-box;
+    background-image: url("../valley.jpg");
+    background-repeat: no-repeat;
+    background-size: 100%;
+    /*overflow: hidden;*/
+}
+.upper-section 
+{
+    width: 100%;
+    height: 200px;
+    padding: 20px;
+}
+.row
+{
+    margin-left:3px;
+    display: flex;
+    text-align: center;
+    justify-content: space-between;
+}
+svg
+{
+    width: 30px;
+    height: 30px;
+    cursor: pointer;
+}
+.col-5
+{
+    position: relative;
+}
+.col-5 > span
+{
+    position: absolute;
+    left: 0px;
+    top: 0px;
+}
+.nav
+{
+    display: flex;
+    text-align: center;
+    justify-content: space-around;
+}
+button
+{
+    border: none;
+    background: transparent;
+}
+button:focus,input:focus{
+    outline: none;
+}
+li
+{
+    animation: apperance 1s ease-in;
+    list-style: none;
+    font-size: medium;
+    font-weight: 450;
+}
+a, a:hover
+{
+    text-decoration: none;
+    color:black;
+}
+#headline
+{
+    margin-left: 40px;
+}
+.backgrounds
+{
+    display: inline-block;
+    margin-top:30px;
+    margin-left:25%;
+}
+.backgrounds > div
+{
+    display: inline-block;
+    margin: 0 20px;
+    width: 150px;
+    height: 130px;
+}
+img
+{
+    width:100%;
+    height: 100%;
+    overflow: hidden;
+}
+.body-content{
+    width: 100%;
+    height: 700px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding:5%;
+}
+input
+{
+    border: 3px solid black;
+    border-radius: 25px;
+    width: 25%;
+    height: 40px;
+    background: transparent;
+    text-align: center;
+    font-size: large;
+    font-weight: 550;
+}
+::placeholder
+{
+    color: black;
+}
+#enter
+{
+    font-size: medium;
+    font-weight: 450;
+}
+.container > span
+{
+    font-size: x-large;
+    font-weight: 450;
+}
+p
+{
+    font-size: large;
+    font-weight: 500;
+}
+@keyframes apperance
+{
+    from{
+        opacity: 0%;
+    }
+    to{
+        opacity:100%;
+    }
+}
+.choose-difficulty
+{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 0px;
+}
+.choose-difficulty > span
+{
+    font-size: xx-large;
+    font-weight: 550;
+    color: black;
+    margin: 5px;
+}
+.select
+{
+    display: flex;
+    justify-content: space-evenly;
+    align-items:center;
+}
+.select > div
+{
+    width: 100px;
+    height: 100px;
+    background-color: transparent;
+    text-align: center;
+    font-size: x-large;
+    font-weight: 550;
+    color: black;
+}
+.paragraph
+{
+    width: 100%;
+    height: 700px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 0px;
+}
+.paragraph > p 
+{
+    font-size: x-large;
+    font-weight: 600;
+    color:#0af6ca;
+}

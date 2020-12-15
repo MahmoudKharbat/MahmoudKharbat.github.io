@@ -1,2 +1,1 @@
-# MahmoudKharbat.github.io
-new project
+# nature-sudoku
