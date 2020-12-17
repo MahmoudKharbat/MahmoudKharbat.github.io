@@ -33,24 +33,28 @@
             </div>
 
             <div class = "row backgrounds">
-                <div id = "img1" style="visibility: hidden;"><button type="button" value = "valley" onclick="changeBackGround(this)"><img src="../valley.jpg"></button></div>
-                <div id = "img2" style="visibility: hidden;"><button type="button" value = "mountains" onclick="changeBackGround(this)"><img src="../mountains.jpg"></button></div>
-                <div id = "img3" style="visibility: hidden;"><button type="button" value = "sunset" onclick="changeBackGround(this)"><img src="../sunset.jpg"></button></div>
-                <div id = "img4" style="visibility: hidden;"><button type="button" value = "waterfall" onclick="changeBackGround(this)"><img src="../waterfall.jpg"></button></div>
-                <div id = "img5" style="visibility: hidden;"><button type="button" value = "fall" onclick="changeBackGround(this)"><img src="../fall.jpg"></button></div>
+                <div id = "img1" style="visibility: hidden;"><button type="button" value = "valley" onclick="changeBackGround(this)"><img src="valley.jpg"></button></div>
+                <div id = "img2" style="visibility: hidden;"><button type="button" value = "mountains" onclick="changeBackGround(this)"><img src="mountains.jpg"></button></div>
+                <div id = "img3" style="visibility: hidden;"><button type="button" value = "sunset" onclick="changeBackGround(this)"><img src="sunset.jpg"></button></div>
+                <div id = "img4" style="visibility: hidden;"><button type="button" value = "waterfall" onclick="changeBackGround(this)"><img src="waterfall.jpg"></button></div>
+                <div id = "img5" style="visibility: hidden;"><button type="button" value = "fall" onclick="changeBackGround(this)"><img src="fall.jpg"></button></div>
             </div>
         </div>
 
         <div class = "body-content container">
             <div class = "inputs">
 
-            
-                <input id = "name" type = "text" placeholder = "UserName" autocomplete = "off" autofocus = "off">
-                <p id = "nameInfo"></p>
-                
-                <input id = "password" type = "password" placeholder ="Password">
-                <p id = "passInfo"></p>
-                
+                <form>
+                    <input id = "nameIn" type = "text" placeholder = "UserName" autocomplete = "off" autofocus = "off">
+                    <span id = "nameInfo"></span>
+                    
+                    <input id = "passwordIn" type = "password" placeholder ="Password">
+                    <span id = "passInfo"></span>
+
+                    <input id = "emailIn" type = "email" placeholder="Email" autocomplete = "off" autofocus = "off">
+                    <span id = "emailInfo"></span>
+                </form>
+
                 <span><button type = "button" onclick = "createNewPlayer()">Enter</button></span>
                 
                 <audio id = "music" autoplay  loop controls style="visibility: hidden;">

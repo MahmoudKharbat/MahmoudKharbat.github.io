@@ -1,4 +1,75 @@
+//localStorage.clear();
 
+function createNewPlayer()
+{
+debugger;
+    if(JSON.parse(localStorage.getItem("Array")) == null) // If the localStorge was empty then save the first player and go to the next page
+    {
+        let newElement = {name:document.getElementById("nameIn").value,pass:document.getElementById("passwordIn").value};
+        localStorage.setItem("Array",JSON.stringify([newElement]));  // Transform from an array format to a localStorge format
+        window.open("index2.html", "_self");  // Open the next page
+    }
+
+    playersList = JSON.parse(localStorage.getItem("Array")); // Transform from a localStorge format to an array
+    for(let i = 0; i<playersList.length;i++)       // Removing the non player elements
+        if(playersList[i].name == "")
+            playersList.splice(i);
+
+    let index;
+    let newElement = {};
+    var playerName = document.getElementById("nameIn").value;
+    var playerPassword = document.getElementById("passwordIn").value;
+    
+    for(index = 0 ;index <= playersList.length;index++) // Run at the array that holds the players 
+    {
+        if(playerName == "")
+        {
+            document.getElementById("nameInfo").innerHTML = "Sorry! the UserName is invalid, try again!";
+            document.getElementById("nameInfo").style.color = "red";
+            document.getElementById("nameIn").style.backgroundColor = "red";
+            break;
+        }
+        if(playerName.length > 20)
+        {
+            document.getElementById("nameInfo").innerHTML = "Sorry! the UserName is too long, try again";
+            document.getElementById("nameInfo").style.color = "red";
+            document.getElementById("nameIn").style.backgroundColor = "red";
+            break;
+        }
+        if(playersList[index].name != playerName && index == playersList.length-1) // assuring that the player is not exist in the array 
+        {
+            newElement.name = playerName;
+            newElement.pass = playerPassword;
+            playersList.push(newElement);
+            localStorage.setItem("Array",JSON.stringify(playersList)); // Adding the player to the localStorge
+            window.open("index2.html", "_self");                      // Open the next page
+            break;
+        }
+        else if(playersList[index].name == playerName)
+        {
+            document.getElementById("nameInfo").innerHTML = "Valid UserName ";
+            document.getElementById("nameInfo").style.color = "green";
+            document.getElementById("nameIn").style.backgroundColor = "green";
+
+            if(playersList[index].pass == playerPassword)
+            {
+                document.getElementById("passInfo").style.color = "green";
+                document.getElementById("passwordIn").style.backgroundColor = "green";
+                window.open("index2.html", "_self");  // Open the next page
+                break; 
+            }
+            else
+            {
+                document.getElementById("passInfo").innerHTML = "Sorry! the password is wrong, try again!";
+                document.getElementById("passInfo").style.color = "red";
+                document.getElementById("passwordIn").style.backgroundColor = "red";
+                break;
+            }
+        }
+    }
+}
+
+/*
 function createNewPlayer()
 {
     let validPlayers = {name: "abcd",pass: "1234"};
@@ -35,7 +106,7 @@ function createNewPlayer()
     }
 }
 
-
+*/
 function chooseDifficulty(d)
 {
     let difficulty = d.value;
